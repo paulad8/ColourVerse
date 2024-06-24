@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ artist.name }}</h1>
+<p>{{ artist.bio }}</p>
+<h2>Artworks</h2>
+<div>
+    {% for artwork in artworks %}
+    <div>
+        <img src="{{ artwork.image.url }}" alt="{{ artwork.title }}">
+        <h2>{{ artwork.title }}</h2>
+        <p>Movement: <a href="{% url 'search_by_movement' artwork.movement.name %}">{{ artwork.movement.name }}</a></p>
+        <p>Medium: {{ artwork.medium }}</p>
+        <p>{{ artwork.description }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ movement.name }} Artworks</h1>
+<div>
+    {% for artwork in artworks %}
+    <div>
+        <img src="{{ artwork.image.url }}" alt="{{ artwork.title }}">
+        <h2>{{ artwork.title }}</h2>
+        <p>Artist: <a href="{% url 'artist_detail' artwork.artist.id %}">{{ artwork.artist.name }}</a></p>
+        <p>Region: {{ artwork.artist.region }}</p>
+        <p>Medium: {{ artwork.medium }}</p>
+        <p>{{ artwork.description }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

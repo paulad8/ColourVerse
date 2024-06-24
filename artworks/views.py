@@ -6,8 +6,13 @@ def home(request):
     return render(request, 'gallery/home.html', {'artworks': artworks})
 
 def search_by_movement(request, movement):
+    # Fetch the movement object based on the provided movement name.
     movement_obj = get_object_or_404(Movement, name=movement)
+
+    # Filter artworks that are associated with the fetched movement.
     artworks = Artwork.objects.filter(movement=movement_obj)
+
+    # Render the 'movement.html' template with the context containing the artworks and movement object.
     return render(request, 'gallery/movement.html', {'artworks':artworks, 'movement': movement_obj})
 
 def artist_detail(request, artist_id):
