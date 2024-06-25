@@ -3,10 +3,9 @@ from .models import Artist, Movement, Artwork
 
 # Customising the admin interface for the Artist model
 class ArtistAdmin(admin.ModelAdmin):
-    list_display = ('name', 'life_span')
+    list_display = ('name', 'birth_year', 'death_year', 'nationality')
     search_fields = ('name',)
     list_filter = ['name'] # ensure this is a list or tuple
-
 
 # Customising the admin interface for the Movement model
 class MovementAdmin(admin.ModelAdmin):
@@ -16,7 +15,7 @@ class MovementAdmin(admin.ModelAdmin):
 
 # Customising the admin interface for the Artwork model
 class ArtworkAdmin(admin.ModelAdmin):
-    list_display = ('title', 'artist', 'movement', 'medium')
+    list_display = ('title', 'artist', 'movement', 'medium', 'created_date')
     search_fields = ('title', 'artist__name', 'movement__name', 'medium')
     list_filter = ('movement', 'medium', 'artist')
     fieldsets = (
