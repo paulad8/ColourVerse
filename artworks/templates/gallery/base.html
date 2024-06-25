@@ -1,7 +1,7 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% load static %}
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Be inspired by art across centuries" />
@@ -57,10 +57,10 @@
                 <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item me-3">
-                        <a class="nav-link" href="{% url 'artists' %}">ARTISTS</a>
+                        <a class="nav-link" href="{% url 'artists_list' %}">ARTISTS</a>
                     </li>
                     <li class="nav-item me-3">
-                        <a class="nav-link" href="{% url 'movement' %}">MOVEMENTS</a>
+                        <a class="nav-link" href="{% url 'movements_list' %}">MOVEMENTS</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
