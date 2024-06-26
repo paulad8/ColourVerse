@@ -1,8 +1,10 @@
 from django.contrib import admin
 from .models import Artist, Movement, Artwork
+from .forms import ArtistForm
 
 # Customising the admin interface for the Artist model
 class ArtistAdmin(admin.ModelAdmin):
+    form = ArtistForm
     list_display = ('name', 'birth_year', 'death_year', 'nationality')
     search_fields = ('name',)
     list_filter = ['name'] # ensure this is a list or tuple
