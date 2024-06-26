@@ -4,10 +4,11 @@ from django.utils import timezone
 class Artist(models.Model):
     name = models.CharField(max_length=100)
     region = models.CharField(max_length=100)
-    birth_year = models.DateField(null=True, blank=True)
-    death_year = models.DateField(null=True, blank=True)
+    birth_year = models.IntegerField(null=True, blank=True)
+    death_year = models.IntegerField(null=True, blank=True)
     nationality = models.CharField(max_length=100, default='Unknown') # Provide a default value
     bio = models.TextField()
+    media = models.CharField(max_length=255, null=True, blank=True)
 
     def __str__(self):
         return self.name
