@@ -9,6 +9,7 @@ class Artist(models.Model):
     nationality = models.CharField(max_length=100, default='Unknown') # Provide a default value
     bio = models.TextField()
     media = models.CharField(max_length=255, null=True, blank=True)
+    portrait = models.ImageField(upload_to='artist_portraits/', null=True, blank=True)
 
     def __str__(self):
         return self.name

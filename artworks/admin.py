@@ -6,8 +6,9 @@ from .forms import ArtistForm
 class ArtistAdmin(admin.ModelAdmin):
     form = ArtistForm
     list_display = ('name', 'birth_year', 'death_year', 'nationality')
-    search_fields = ('name',)
-    list_filter = ['name'] # ensure this is a list or tuple
+    search_fields = ('name', 'media')
+    list_filter = ['name']
+    fields = ['name', 'birth_year', 'death_year', 'nationality', 'media', 'portrait']
 
 # Customising the admin interface for the Movement model
 class MovementAdmin(admin.ModelAdmin):

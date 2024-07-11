@@ -7,4 +7,4 @@ class ArtistForm(forms.ModelForm):
 
     class Meta:
         model = Artist
-        fields = ['name', 'region', 'birth_year', 'death_year', 'nationality', 'bio', 'media']
+        fields = ['name', 'region', 'birth_year', 'death_year', 'nationality', 'bio', 'media', 'portrait']
