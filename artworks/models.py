@@ -10,12 +10,14 @@ class Artist(models.Model):
     bio = models.TextField()
     media = models.CharField(max_length=255, null=True, blank=True)
     portrait = models.ImageField(upload_to='artist_portraits/', null=True, blank=True)
+    sample_artwork = models.ForeignKey('Artwork', on_delete=models.SET_NULL, null=True, blank=True,
+                                       related_name='sampled_artworks')
 
     def __str__(self):
         return self.name
 
 class Movement(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=150)
     description = models.TextField()
     image = models.ImageField(upload_to='movement_images/', null=True, blank=True)
 

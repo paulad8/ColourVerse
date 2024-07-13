@@ -5,7 +5,7 @@ import random
 
 def home(request):
     artworks = Artwork.objects.all()
-    return render(request, 'gallery/home.html', {'artworks': artworks})
+    return render(request, 'gallery/home.html')
 
 
 def search_by_movement(request, movement):
