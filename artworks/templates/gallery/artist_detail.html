@@ -1,32 +1,31 @@
 {% extends 'gallery/base.html' %}
 
 {% block content %}
-<div class="container">
-    <h1>{{ artist.name }}</h1>
-    <p>Born: {{ artist.birth_year }}</p>
-    <p>Died: {{ artist.death_year }}</p>
-    <p>Nationality: {{ artist.nationality }}</p>
-    <p>{{ artist.bio }}</p>
-    <p>Media: {{ artist.media }}</p>
-    {% if artist.portrait %}
-        <img src="{{ artist.portrait.url }}" alt="{{ artist.name }}'s portrait">
-    {% endif %}
+<div class="header-image">
+    <img src="{{ artist.sample_artwork.image.url }}" alt="{{ artist.sample_artwork.title }}">
 </div>
 <div class="container">
-<h2>Artworks</h2>
-    <div class="row">
+    <div class="artist-info">
+        <div class="text">
+            <h3>{{ artist.name }}</h3>
+                <p>{{ artist.birth_year }} - {{ artist.death_year }}&nbsp;&nbsp;&nbsp;{{ artist.nationality }}</p>
+                <p>{{ artist.bio }}</p>
+                <p><strong>Media:</strong> {{ artist.media }}</p>
+        </div>
+        <div class="portrait">
+            <img src="{{ artist.portrait.url }}" alt="{{ artist.name }}'s portrait">
+        </div>
+    </div>
+</div>
+<div class="works-grid">
+<h4>Artworks</h4>
     {% for artwork in artworks %}
-        <div class="col-md-4">
-            <div class="card">
+        <div class="works-card">
             <img src="{{ artwork.image.url }}" alt="{{ artwork.title }}">
                 <div class="card-body">
-                    <h2 class="card-title">{{ artwork.title }}</h2>
-                    <p class="card-text">Movement: <a href="{% url 'search_by_movement' artwork.movement.name %}">{{ artwork.movement.name }}</a></p>
-                    <p class="card-text">Medium: {{ artwork.medium }}</p>
+                    <h4 class="card-title">{{ artwork.title }}</h4>
                 </div>
-            </div>
+        {% endfor %}
         </div>
-    {% endfor %}
-    </div>
 </div>
 {% endblock %}
