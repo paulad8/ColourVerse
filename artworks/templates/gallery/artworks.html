@@ -1,0 +1,11 @@
+{% extends 'gallery/base.html' %}
+{% block content %}
+    <div class="artworks-container">
+        {% for artwork in artworks %}
+            <div class="artwork-card">
+                <img src="{{ artwork.image.url }}" alt="{{ artwork.title }}">
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
