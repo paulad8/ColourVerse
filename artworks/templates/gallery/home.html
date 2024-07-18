@@ -3,11 +3,9 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<div class="home-container">
+<main class="home-container">
     <h1>Gallery</h1>
-    <p>Discover the beauty of art from various artists and movements. Explore, appreciate, and be inspired.</p>
-    {% for artwork in artworks %}
-    <a href="{% url 'artworks_list' %}" class="btn">Enter the Gallery</a>
-</div>
-    {% endfor %}
+    <p class="blurb">Discover the beauty of art from various artists and movements. Explore, appreciate, and be inspired.</p>
+    <a href="{% url 'random_artworks' %}" class="btn">Enter the Gallery</a>
+</main>
 {% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'gallery/base.html' %}
+{% block content %}
+    <main class="artwork-detail-container">
+        <h2>{{ artwork.title }}</h2>
+        <img src="{{ artwork.image.url }}" alt="{{ artwork.title }}">
+        <p>Artist: <a href="{% url 'artist_detail' artwork.artist.id %}">{{ artwork.artist.name }}</a></p>
+        <p>Created Date: {{ artwork.created_date }}</p>
+        {% if artwork.movement %}
+        <p>Movement: <a href="{% url 'search_by_movement' artwork.movement.name %}">{{ artwork.movement.name }}</a></p>
+        {% endif %}
+    </main>
+{% endblock %}

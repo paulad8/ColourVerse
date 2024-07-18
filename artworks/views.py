@@ -33,3 +33,12 @@ def movements_list(request):
     movements = list(Movement.objects.all())
     random.shuffle(movements)
     return render(request, 'gallery/movements_list.html', {'movements' : movements})
+
+def random_artworks(request):
+    artworks = list(Artwork.objects.all())
+    random.shuffle(artworks)
+    return render(request, 'gallery/random_artworks.html', {'artworks': artworks[:10]})
+
+def artwork_detail(request, artwork_id):
+    artwork = get_object_or_404(Artwork, pk=artwork_id)
+    return render(request, 'gallery/artwork_detail.html', {'artwork': artwork})

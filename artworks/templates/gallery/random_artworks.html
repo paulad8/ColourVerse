@@ -1,0 +1,17 @@
+{% extends 'gallery/base.html' %}
+
+{% block title %}Random Artworks{% endblock %}
+
+{% block content %}
+<main class="artworks-container">
+    <div class="works-grid">
+        {% for artwork in artworks %}
+        <div class="works-card">
+            <a href="{% url 'artwork_detail' artwork.id %}">
+                <img src="{{ artwork.image.url }}" alt="{{ artwork.title }}">
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</main>
+{% endblock %}

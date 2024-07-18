@@ -1,9 +1,5 @@
-﻿
-
-@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
-
+﻿@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
 
 * {
     padding: 0;
@@ -17,10 +13,17 @@ html {
 
 body {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
     background: linear-gradient(135deg, #fde6e6, #cfe6fa);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #172B4D;
+}
+
+:root {
     --text-size-80: 0.694rem;
     --text-size-90: 0.833rem;
     --text-size-100: 1rem;
@@ -34,45 +37,55 @@ body {
     --text-size-900: 4.3rem;
     --text-size-1000: 5.16rem;
     --text-size-1100: 6.192rem;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    color: #172B4D;
 }
 
-h1, .h1, h2, .h2 {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin-top: 2.25rem;
   margin-bottom: 1rem;
-  font-family: 'Major Mono Display', monospace;
   font-weight: 400;
   line-height: 1.15;
   letter-spacing: -0.022em;
 }
+
+h1, .h1 {
+    font-family: 'Major Mono Display', monospace;
+    font-size: var(--text-size-1100);
+}
+
+h2, .h2 {
+    font-family: 'Major Mono Display', monospace;
+    font-size: var(--text-size-700);
+}
+
+h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+h3, .h3 {
+    font-size: var(--text-size-500);
+}
+
+h4, .h4 {
+    font-size: var(--text-size-400);
+}
+
+h5, .h5 {
+    font-size: var(--text-size-300);
+}
+
+h6, .h6 {
+    font-size: var(--text-size-200);
+}
+
 p {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+
 small {
   font-size: var(--text-size-90);
 }
-h6, .h6 {
-  font-size: var(--text-size-200);
-}
-h5, .h5 {
-  font-size: var(--text-size-300);
-}
-h4, .h4 {
-  font-size: var(--text-size-400);
-}
-h3, .h3 {
-  font-size: var(--text-size-500);
-}
-h2, .h2 {
-  font-size: var(--text-size-700);
-}
-h1, .h1 {
-  font-size: var(--text-size-1100);
-}
+
 .text-size-80 {
     font-size: var(--text-size-80);
     }
@@ -113,14 +126,29 @@ h1, .h1 {
     font-size: var(--text-size-1100);
     }
 
-h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-    margin-top: 2.25rem;
-    margin-bottom: 1rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    line-height: 1.15;
-    letter-spacing: 0.022em;
-    }
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.blurb {
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+header, footer {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
 
 .home-container {
     text-align: center;
@@ -141,12 +169,10 @@ h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     }
 
 .container  {
-    width: 100vw;
+    width: 100%;
     height: auto;
-    padding-right: .75rem;
-    padding-left: .75rem;
-    margin-right: auto;
-    margin-left: auto;
+    padding: .75rem;
+    margin: auto;
 }
 
 .header-image {
@@ -155,7 +181,7 @@ h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     overflow: hidden;
 }
 
-.header-image {
+.header-image img {
     width: 100%;
     height: auto;
 }
@@ -189,6 +215,7 @@ h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    width: 100%;
 }
 
 .works-card {
@@ -253,9 +280,16 @@ input:placeholder-shown  {
 
 
 .btn .btn-primary  {
-    border-radius: .25rem;
-    padding: .75rem 1.5rem;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
     font-size: 1.2rem;
+    background-color: #007bff;
+    text-decoration: underline;
+    transition: background-color 0.3s ease;
 }
 
-https://github.com/paulad8/colourify.git
+.btn:hover {
+    background-color: #0056b3;
+}
+
