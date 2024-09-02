@@ -11,7 +11,7 @@ urlpatterns = [
     path('movements/', views.movements_list, name='movements_list'),
     path('random_artworks/', views.random_artworks, name='random_artworks'),
     path('artwork/<int:artwork_id>/', views.artwork_detail, name='artwork_detail'),
-]
+] 
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

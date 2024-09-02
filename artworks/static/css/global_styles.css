@@ -226,12 +226,19 @@ header, footer {
     cursor: pointer;
     flex: 1 1 calc(33.333% - 1rem);
     max-width: calc(33.333% - 1rem);
+    position: relative;
+    height: 300px;
 }
 
 .works-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-}
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    }
 
 @media (max-width: 768px) {
     .artist-info {
@@ -273,23 +280,55 @@ header, footer {
     object-fit: cover;
 }
 
+.artwork-details-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.artwork-details {
+    margin-top: 20px;
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.artwork-details p {
+    margin: 10px 0;
+}
+
+
 input:placeholder-shown  {
     text-overflow: ellipsis;
     font-style: italic;
 }
 
 
-.btn .btn-primary  {
+.primary-btn {
     display: inline-block;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: .75rem 1.5rem;
+    border-radius: .25rem;
     font-size: 1.2rem;
-    background-color: #007bff;
-    text-decoration: underline;
+    background-color: #8a118a;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 1.5rem;
     transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-    background-color: #0056b3;
+.primary-btn:hover {
+    background-color: #FFC0CB;
 }
 
