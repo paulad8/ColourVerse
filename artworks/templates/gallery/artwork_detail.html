@@ -17,6 +17,6 @@
         <p><strong>Movement: </strong><a href="{% url 'search_by_movement' artwork.movement.name %}">{{ artwork.movement.name }}</a></p>
         {% endif %}
             </div>
-        <a href="{% url 'random_artworks.html' %}" class="primary-btn">Back to Gallery</a>
+        <a href="{% url 'random_artworks' %}" class="primary-btn">Back to Gallery</a>
     </main>
 {% endblock %}

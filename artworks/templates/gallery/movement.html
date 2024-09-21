@@ -1,17 +1,26 @@
 {% extends 'gallery/base.html' %}
 
 {% block content %}
-<h1>{{ movement.name }} Artworks</h1>
+<h1>{{ movement.name }}</h1>
 <div>
-    {% for artwork in artworks %}
-    <div>
-        <img src="{{ artwork.image.url }}" alt="{{ artwork.title }}">
-        <h2>{{ artwork.title }}</h2>
-        <p>Artist: <a href="{% url 'artist_detail' artwork.artist.id %}">{{ artwork.artist.name }}</a></p>
-        <p>Region: {{ artwork.artist.region }}</p>
-        <p>Medium: {{ artwork.medium }}</p>
-        <p>{{ artwork.description }}</p>
+    <div class="intro">
+        <p>{{ movement.description|linebreaks }}</p>
     </div>
-    {% endfor %}
+    <div class="artwork-grid">
+    {% for artwork in artworks %}
+        <div>
+            <div class="artwork-item">
+            <div class="artwork-frame">
+                <img src="{{ artwork.image.url }}" alt="{{ artwork.title }}">
+                </div>
+                    <h3><em>{{ artwork.title }}</em></h3>
+                <div class="artwork-meta">
+                <p>Artist: <a href="{% url 'artist_detail' artwork.artist.id %}">{{ artwork.artist.name }}</a></p>
+                    <p>Region: {{ artwork.artist.region }}, {{ artwork.medium }}, {{ artwork.description }}</p>
+                </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}

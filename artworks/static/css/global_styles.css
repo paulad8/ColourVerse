@@ -43,7 +43,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin-top: 2.25rem;
   margin-bottom: 1rem;
   font-weight: 400;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: -0.022em;
 }
 
@@ -142,9 +142,13 @@ main {
     font-size: 1.2em;
 }
 
+.intro {
+    text-align: left;
+}
+
 header, footer {
     width: 100%;
-    background-color: #333;
+    background-color: #172B4D;
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -318,17 +322,45 @@ input:placeholder-shown  {
 .primary-btn {
     display: inline-block;
     padding: .75rem 1.5rem;
-    border-radius: .25rem;
+    border-radius: 2rem;
     font-size: 1.2rem;
     background-color: #8a118a;
     color: white;
     text-decoration: none;
     cursor: pointer;
     margin: 1.5rem;
-    transition: background-color 0.3s ease;
+    transition: background-color .8s ease, transform .6s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .primary-btn:hover {
     background-color: #FFC0CB;
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
 }
 
+.artwork-frame {
+    display: inline-block;
+    margin: 10px;
+    text-align: left;
+}
+
+.artwork-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.artwork-meta {
+    font-size: 14px;
+}
+
+.artwork-meta .title {
+    font-style: italic;
+}
+
+.artwork-meta .artist,
+.artwork-meta .year {
+    font-weight: 300;
+}
