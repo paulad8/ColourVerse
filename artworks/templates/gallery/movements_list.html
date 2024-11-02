@@ -5,13 +5,19 @@
     <div class="row row-cols-1 row-cols-md-3 g-4">
         {% for movement in movements %}
         <div class="col">
+            {% for artwork in movement.artworks.all %}
             <div class="card h-100">
-                <img src="{{ movement.image.url }}" class="card-img-top" alt="{{ movement.name }}">
+                {% if artwork.image %}
+                <img src="{{ artwork.image.url }}" class="card-img-top" alt="{{ artwork.title }}">
+                {% else %}
+                <p>No image available for this artwork.</p>
+                {% endif %}
                 <div class="card-body">
                     <h5 class="card-title">{{ movement.name }}</h5>
-                    <a href="{% url 'movement_detail' movement.name %}" class="btn btn-primary">View Details</a>
+                    <a href="{% url 'movement' movement.name %}" class="btn btn-primary">View Details</a>
                 </div>
-            </div>
+
+                {% endfor %}
         </div>
         {% endfor %}
     </div>

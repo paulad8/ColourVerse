@@ -11,6 +11,7 @@ urlpatterns = [
     path('movements/', views.movements_list, name='movements_list'),
     path('random_artworks/', views.random_artworks, name='random_artworks'),
     path('artwork/<int:artwork_id>/', views.artwork_detail, name='artwork_detail'),
+    path('movement/<str:movement_name>/', views.movement, name='movement'),
 ]
 
 if settings.DEBUG:
