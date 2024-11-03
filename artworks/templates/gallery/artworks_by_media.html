@@ -1,0 +1,17 @@
+{% extends 'gallery/base.html' %}
+
+{% block content %}
+<h1>{{ media }}</h1>
+<div class="artwork-grid">
+    {% for artwork in artworks %}
+        <div class="works-card">
+            <a href="{% url 'artist_detail' artwork.artist.id %}">
+                <img src="{{ artwork.image.url }}" alt="{{ artwork.title }}">
+            </a>
+            <div class="card-body">
+                <h4 class="card-title">{{ artwork.title }}</h4>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

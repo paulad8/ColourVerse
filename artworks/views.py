@@ -50,3 +50,11 @@ def random_artworks(request):
 def artwork_detail(request, artwork_id):
     artwork = get_object_or_404(Artwork, pk=artwork_id)
     return render(request, 'gallery/artwork_detail.html', {'artwork': artwork})
+
+def artworks_by_media(request, media):
+    artworks = Artwork.objects.filter(media=media)
+    context = {
+        'media': media,
+        'artworks': artworks
+    }
+    return render(request, 'gallery/artworks_by_media.html', context)
