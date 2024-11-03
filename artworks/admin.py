@@ -11,10 +11,10 @@ class ArtworkInline(admin.TabularInline):  # or admin.StackedInline for a differ
 class ArtistAdmin(admin.ModelAdmin):
     form = ArtistForm
     inlines = [ArtworkInline]
-    list_display = ('name', 'birth_year', 'death_year', 'nationality', 'bio')
+    list_display = ('name', 'birth_year', 'death_year', 'nationality', 'bio', 'movement')
     search_fields = ('name', 'media')
     list_filter = ['name']
-    fields = ['name', 'birth_year', 'death_year', 'nationality', 'media', 'portrait', 'bio']
+    fields = ['name', 'birth_year', 'death_year', 'nationality', 'media', 'portrait', 'bio', 'movement']
 
 # Customising the admin interface for the Movement model
 class MovementAdmin(admin.ModelAdmin):

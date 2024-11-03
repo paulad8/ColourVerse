@@ -2,34 +2,69 @@
 
 {% block content %}
 <div class="header-image">
-    <img src="{{ artist.sample_artwork.image.url }}" alt="{{ artist.sample_artwork.title }}">
+    {% if artworks|length > 0 %}
+        {% with artworks|random as random_artwork %}
+            <img src="{{ random_artwork.image.url }}" alt="{{ artist.name }}'s Artwork">
+        {% endwith %}
+    {% endif %}
 </div>
-<div class="container">
+
+<div class="artist-detail-container">
     <div class="artist-info">
         <div class="artist-info-text">
             <h3>{{ artist.name }}</h3>
-                <p>{{ artist.birth_year }} - {{ artist.death_year }}&nbsp;&nbsp;&nbsp;{{ artist.nationality }}&nbsp;&nbsp;&nbsp;{{ artist.movement }}</p>
+                <p>{{ artist.birth_year }} - {{ artist.death_year }}&nbsp;&nbsp;&nbsp;{{ artist.nationality }}&nbsp;&nbsp;&nbsp;<a href="{% url 'movement' artist.movement.name %}">{{ artist.movement.name }}</a></p>
                 <p>{{ artist.bio }}</p>
-                <p>Media: {{ artist.media }}</p>
+                <p>Media: <a href="{% url 'artworks_by_media' artist.media %}">{{ artist.media }}</a></p>
         </div>
+
         <div class="portrait">
             {% if artist.portrait %}
-        <img src="{{ artist.portrait.url }}" alt="{{ artist.name }}'s Portrait">
-    {% else %}
-        <p>No portrait available for this artist.</p>
-    {% endif %}
+                <img src="{{ artist.portrait.url }}" alt="{{ artist.name }}'s Portrait">
+            {% else %}
+                <p class="no-portrait">No portrait is available for this artist.</p>
+            {% endif %}
         </div>
     </div>
 </div>
-<div class="works-grid">
+
 <h4>Artworks</h4>
+
+<div class="works-grid">
     {% for artwork in artworks %}
         <div class="works-card">
-            <img src="{{ artwork.image.url }}" alt="{{ artwork.title }}">
+            <img src="{{ artwork.image.url }}" alt="{{ artwork.title }}"
+            onclick="openModal('{{ artwork.image.url }}', '{{ artwork.title }}')">
                 <div class="card-body">
                     <h4 class="card-title">{{ artwork.title }}</h4>
                 </div>
-        {% endfor %}
         </div>
+    {% endfor %}
 </div>
+
+<div id="artworkModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="caption"></div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+function openModal(imageUrl, title) {
+    var modal = document.getElementById("artworkModal");
+    var modalImg = document.getElementById("modalImage");
+    var captionText = document.getElementById("caption");
+
+    modal.style.display = "block";
+    modalImg.src = imageUrl;
+    captionText.innerHTML = title;
+}
+
+function closeModal() {
+    var modal = document.getElementById("artworkModal");
+    modal.style.display = "none";
+}
+</script>
 {% endblock %}

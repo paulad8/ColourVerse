@@ -12,6 +12,7 @@ class Artist(models.Model):
     portrait = models.ImageField(upload_to='artist_portraits/', null=True, blank=True)
     sample_artwork = models.ForeignKey('Artwork', on_delete=models.SET_NULL, null=True, blank=True,
                                        related_name='sampled_artworks')
+    movement = models.ForeignKey('Movement', on_delete=models.SET_NULL, null=True, blank=True)
 
     def __str__(self):
         return self.name
