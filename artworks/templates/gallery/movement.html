@@ -6,9 +6,9 @@
     <div class="intro">
         <p>{{ movement.description|linebreaks }}</p>
     </div>
-    <div class="artwork-grid">
+    <div class="grid-container">
     {% for artwork in artworks %}
-        <a href="{% url 'artist_detail' artwork.artist.id %}" class="artwork-item">
+        <a href="{% url 'artist_detail' artwork.artist.id %}" class="artwork-card">
             <div class="artwork-frame">
                 <img src="{{ artwork.image.url }}" alt="{{ artwork.title }}">
             </div>
@@ -19,4 +19,5 @@
         </a>
         {% endfor %}
     </div>
+</div>
 {% endblock %}
