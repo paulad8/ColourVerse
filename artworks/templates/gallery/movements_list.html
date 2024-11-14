@@ -1,25 +1,21 @@
 {% extends "gallery/base.html" %}
 {% block content %}
-<div class="container ">
-    <h1 class="text-center ">Movements</h1>
-    <div class="artwork-grid">
+<div class="container">
+    <h1 class="text-center">Movements</h1>
+    <div class="grid-container">
         {% for movement in movements %}
-        <div class="artwork-item">
-            <div class="works-grid">
-            {% for artwork in movement.artworks.all %}
+        <a href="{% url 'movement' movement.name %}" class="artwork-item">
             <div class="works-card">
-                {% if artwork.image %}
-                <img src="{{ artwork.image.url }}" alt="{{ artwork.title }}">
+                {% if movement.image %}
+                    <img src="{{ movement.image.url }}" alt="{{ movement.name }}">
                 {% else %}
-                <p>No image available for this artwork.</p>
+                    <p>No image available for this movement.</p>
                 {% endif %}
                 <div class="card-body">
                     <h5 class="card-title">{{ movement.name }}</h5>
-                    <a href="{% url 'movement' movement.name %}" class="btn btn-primary">View Details</a>
                 </div>
-                </div>
-                {% endfor %}
-        </div>
+            </div>
+        </a>
         {% endfor %}
     </div>
 </div>
