@@ -10,11 +10,11 @@
             {% endif %}
         </div>
         <div class="artwork-details">
-            <p><strong>Artist: </strong><a href="{% url 'artist_detail' artwork.artist.id %}">{{ artwork.artist.name }}</a></p>
+            <p>Artist: <a href="{% url 'artist_detail' artwork.artist.id %}" class="btn-link">{{ artwork.artist.name }}</a></p>
         <p><strong>Created Date: </strong>{{ artwork.description }}</p>
-            <p><strong>Medium: </strong>{{ artwork.medium }}</p>
+            <p>Medium: {{ artwork.medium }}</p>
         {% if artwork.movement %}
-        <p><strong>Movement: </strong><a href="{% url 'search_by_movement' artwork.movement.name %}">{{ artwork.movement.name }}</a></p>
+        <p>Movement: <a href="{% url 'search_by_movement' artwork.movement.name %}" class="btn-link">{{ artwork.movement.name }}</a></p>
         {% endif %}
             </div>
         <a href="{% url 'random_artworks' %}" class="primary-btn">Back to Gallery</a>

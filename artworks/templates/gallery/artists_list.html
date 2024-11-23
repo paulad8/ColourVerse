@@ -1,19 +1,23 @@
 {% extends 'gallery/base.html' %}
 {% block content %}
-<div class="container my-5">
-    <h1 class="text-center mb-5">Artists</h1>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        {% for artist in artists %}
-        <div class="col">
-            <div class="card h-100">
-                <img src="{{ artist.image.url }}" class="card-img-top" alt="{{ artist.name }}">
-                <div class="card-body">
-                    <h5 class="card-title">{{ artist.name }}</h5>
-                    <a href="{% url 'artist_detail' artist.id %}" class="btn primary-btn">View Details</a>
-                </div>
-            </div>
+<h1 class="text-center">Artists</h1>
+<div class="grid-container">
+    {% for artist in artists %}
+    <a href="{% url 'artist_detail' artist.id %}" class="artist-card">
+        <div class="artist-card-image">
+            {% if artist.portrait %}
+                <img src="{{ artist.portrait.url }}" alt="{{ artist.name }}">
+            {% elif artist.sample_artwork and artist.sample_artwork.image %}
+                <img src="{{ artist.sample_artwork.image.url }}" alt="{{ artist.name }}'s Artwork">
+            {% else %}
+                <div class="placeholder-icon">🎨</div> <!-- Fallback icon when no image is available -->
+            {% endif %}
         </div>
-        {% endfor %}
-    </div>
+        <div class="artist-card-body">
+            <h3 class="artist-name">{{ artist.name }}</h3>
+            <p class="artist-region">{{ artist.region }}</p>
+        </div>
+    </a>
+    {% endfor %}
 </div>
 {% endblock %}

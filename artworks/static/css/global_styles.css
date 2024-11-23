@@ -278,16 +278,6 @@ header, footer {
     }
 }
 
-/* .works-card {
-    background-color: transparent;
-    overflow: hidden;
-    cursor: pointer;
-    flex: 1 1 calc(33.333% - 1rem);
-    max-width: calc(33.333% - 1rem);
-    position: relative;
-    height: 300px;
-}
-*/
 
 .works-card img {
     width: 100%;
@@ -374,7 +364,6 @@ header, footer {
 }
 
 .artwork-card, .works-card {
-    background-color: transparent;
     border-radius: .5rem;
     overflow: hidden;
     cursor: pointer;
@@ -382,7 +371,7 @@ header, footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: #091E4208;
+    background-color: #091E4208;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
     text-decoration: none;
@@ -465,6 +454,85 @@ input:placeholder-shown  {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     margin-top: 20px;
+    padding: 20px;
+}
+
+.artist-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease-in-out;
+    padding: 10px;
+    background-color: #00000029;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.artist-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #00000029;
+}
+
+/* Image section inside the artist card */
+.artist-card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee; /* Light background for placeholder */
+    border-radius: 8px;
+}
+
+.artist-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Placeholder icon styling */
+.placeholder-icon {
+    font-size: 3rem;
+    color: #aaa;
+}
+
+/* Card body styling */
+.artist-card-body {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.artist-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.artist-region {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Responsive grid adjustments */
+@media (min-width: 992px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
 }
 
 .artwork-item {

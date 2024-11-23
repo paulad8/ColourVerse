@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404
+from django.db.models import Q
 from .models import Artist, Movement, Artwork
 import random
 
@@ -7,6 +8,29 @@ def home(request):
     artworks = Artwork.objects.all()
     return render(request, 'gallery/home.html')
 
+def search(request):
+    query = request.GET.get('q', '')
+    artists = Artist.objects.filter(
+        Q(name__icontains=query) |
+        Q(region__icontains=query) |
+        Q(nationality__icontains=query)
+    )
+    movements = Movement.objects.filter(
+        Q(name__icontains=query) |
+        Q(description__icontains=query)
+    )
+    artworks = Artwork.objects.filter(
+        Q(title__icontains=query) |
+        Q(medium__name__icontains=query)
+    )
+
+    context = {
+        'query': query,
+        'artists': artists,
+        'movements': movements,
+        'artworks': artworks,
+    }
+    return render(request, 'gallery/search_results.html', context)
 
 def search_by_movement(request, movement):
     # Fetch the movement object based on the provided movement name.
@@ -52,7 +76,8 @@ def artwork_detail(request, artwork_id):
     return render(request, 'gallery/artwork_detail.html', {'artwork': artwork})
 
 def artworks_by_media(request, media):
-    artworks = Artwork.objects.filter(media=media)
+    medium = get_object_or_404(Medium, name=media)
+    artworks = Artwork.objects.filter(medium=medium )
     context = {
         'media': media,
         'artworks': artworks
