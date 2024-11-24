@@ -15,7 +15,7 @@
             <h3>{{ artist.name }}</h3>
                 <p>{{ artist.birth_year }} - {{ artist.death_year }}&nbsp;&nbsp;&nbsp;{{ artist.nationality }}&nbsp;&nbsp;&nbsp;<a href="{% url 'movement' artist.movement.name %}" class="btn-link">{{ artist.movement.name }}</a></p>
                 <p>{{ artist.bio }}</p>
-                <p>Media: <a href="{% url 'artworks_by_media' artist.media %}" class="btn-link">{{ artist.media }}</a></p>
+                <p>Media: {{ artist.media }}</p>
         </div>
 
         <div class="portrait">

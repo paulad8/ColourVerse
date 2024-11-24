@@ -1,28 +1,52 @@
 {% extends "gallery/base.html" %}
 {% block content %}
-<h1>Search Results for "{{ query }}"</h1>
+<h1 class="header-search-results">Search Results for "{{ query }}"</h1>
 
 {% if artists or movements or artworks %}
-    <h2>Artists</h2>
-    <ul>
-        {% for artist in artists %}
-        <li><a href="{% url 'artist_detail' artist.id %}" class="btn-link">{{ artist.name }}</a></li>
-        {% endfor %}
+    <h2 class="subheader-search-results">Artists</h2>
+    <ul class="results-list">
+    {% for artist in artists %}
+    <li>
+        <a href="{% url 'artist_detail' artist.id %}" class="btn-link">
+            <span>{{ artist.name }}</span>
+        </a>
+    </li>
+    {% empty %}
+    <p>No artists found.</p>
+    {% endfor %}
     </ul>
 
-    <h2>Movements</h2>
-    <ul>
-        {% for movement in movements %}
-        <li><a href="{% url 'movement' movement.name %}" class="btn-link">{{ movement.name }}</a></li>
-        {% endfor %}
-    </ul>
+    <h2 class="subheader-search-results">Movements</h2>
+    <ul class="results-list">
+    {% for movement in movements %}
+    <li>
+        <a href="{% url 'movement' movement.name %}">
+            {% if movement.image %}
+            <img src="{{ movement.image.url }}" alt="{{ movement.name }}" class="result-image">
+            {% endif %}
+            <span>{{ movement.name }}</span>
+        </a>
+    </li>
+    {% empty %}
+    <p>No movements found.</p>
+    {% endfor %}
+</ul>
 
-    <h2>Artworks</h2>
-    <ul>
-        {% for artwork in artworks %}
-        <li><a href="{% url 'artist_detail' artwork.artist.id %}" class="btn-link">{{ artwork.title }} by {{ artwork.artist.name }}</a></li>
-        {% endfor %}
-    </ul>
+    <h2 class="subheader-search-results">Artworks</h2>
+    <ul class="results-list">
+    {% for artwork in artworks %}
+    <li>
+        <a href="{% url 'artist_detail' artwork.artist.id %}">
+            {% if artwork.image %}
+            <img src="{{ artwork.image.url }}" alt="{{ artwork.title }}" class="result-image">
+            {% endif %}
+            <span>{{ artwork.title }}</span>
+        </a>
+    </li>
+    {% empty %}
+    <p>No artworks found.</p>
+    {% endfor %}
+</ul>
 {% else %}
     <p>No results found for "{{ query }}".</p>
 {% endif %}
