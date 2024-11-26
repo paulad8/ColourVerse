@@ -3,22 +3,35 @@
 ***
 *Developed by Paula De Amicis*
 
-Code Institute's Milestone Project 3 culminates in the successful completion of all modules in the Full-stack Development journey. 
-Drawing knowledge from HTML, CSS, JavaScript, Bootstrap, jQuery, GitHub, Python and Django.
+Code Institute's Milestone Project 3 culminates in completing all modules in the Full-stack Development journey. 
+Drawing knowledge from HTML5, CSS3, JavaScript, SQLite, GitHub, Python and Django.
 <Visit live website>
 
 <Insert composite image of game screenshots>
 
 ### TABLE OF CONTENTS
-...
+1. Project Objective
+2. Project Concept
+3. User Objectives
+4. Site Owner Objectives
+5. User Experience
+6. Design
+7. Structure
+8. Technologies Used
+9. Testing
+10. Credits
+    
 ***
 
 ### PROJECT OBJECTIVE
 To create a website with a single main page displaying randomly selected images removed from a separate portfolio page. 
 
 ### PROJECT CONCEPT
-Art Space is a website that showcases selected artwork from a range of pioneering artists from the Early Renaissance to modern times. Around 40 artists will be showcased with a short biography and a selection of notable works.
-All works and artists will be searchable by movement (style), region and medium. Users will also be able to search by keyword and be presented with the search result displayed on a new page with the keyword displayed as the header and results organised in a grided card format. 
+Art Space is an interactive, visually appealling online gallery that showcases a selection of pioneering artists, their artworks, and the movements they belong to. It offers an intuitive way for users to explore and discover art through search functionality, detailed artist and artwork pages, and categorised movements. The platform prioritises: 
+- A clean and consistent design aligned with modern web standards.
+- Responsive layouts to ensure a seamless experience across devices.
+- Efficient search capabilities for users to find information by artist, movement or medium.
+- Modularity and scalability to accommodate future enhancements, such as adding more artists, artworks, 
 
 #### USER OBJECTIVES
 - Art is for everybody.
@@ -28,14 +41,14 @@ All works and artists will be searchable by movement (style), region and medium.
 
 #### SITE OWNER OBJECTIVES
 - Demonstrate competency in the languages and frameworks studied under the Full Stack Development journey
-- Create an artwork repository that is compelling and engaging and applies UX principles effectively. 
+- Create an artwork repository that is compelling and engaging and applies modern UI standards and UX principles effectively. 
 - Design a visually appealing, fully responsive and accessible website
-- Challenge myself by incorporating my newly acquired programming knowledge with my design background.  
+- Challenge myself by incorporating newly acquired programming knowledge with my design background.  
 
 ***
 ### USER EXPERIENCE
 #### TARGET AUDIENCE
-Web users interested in art, art history and the human eye's inclination to beauty. 
+This project is designed to be a resourceful tool for art enthusiasts, researchers, and educators, while also celebrating the diversity of artistic expression through a thoughtfully curated online experience.
 
 #### USER REQUIREMENTS
 - Simple navigation
@@ -43,7 +56,6 @@ Web users interested in art, art history and the human eye's inclination to beau
 - Responsive website that allows users to view and interact on any device
 - Meets W3C accessibility standards to ensure the site works equally for everyone
 - No broken code
-- Provide a 404 page when something unexpectedly goes wrong and redirects users to another page 
 
 ***
 
@@ -51,33 +63,73 @@ Web users interested in art, art history and the human eye's inclination to beau
 
 
 #### COLOUR PALETTE 
-Consistent across all devices, and to complement and distract the artworks on display, I have chosen a background with a gradient of soft muted hues of lavender and pink. Components complement in purple with a similar subtle range of interaction states.
-![insert image here]
+Consistent across all devices, to complement and not compete with the artworks on display, I have chosen a background with a gradient of soft muted hues of lavender and pink. Components complement in purple with a similar subtle range of interaction states.
 
 
 #### TYPOGRAPHY
 Google Fonts are incorporated into the website: **Major Mono Display** for the heading and subheadings and **Poppins** for all other scales with a standard sans serif fallback. Major Mono Display was selected to reflect the site's arty aspect, while Poppins is legible and clear. 
-
-#### STRUCTURE
-ArtSpace.... 
 
 #### PROTOTYPES
 Wireframes, concept prototypes and user journeys were mapped out using [Figma](https://www.figma.com "Figma home"). 
    
 ![insert image here]
 
-   ***
-## TECHNOLOGIES EMPLOYED
+### STRUCTURE
+The site is organised into several key sections, each designed to provide users with an intuitive way to navigate and explore the gallery's content: 
+1. Home page
+   - A welcoming introduction to the gallery,
+   - Highlights key features such as search functionality,
+   - Provides easy access to the primary navigation menu.
+2. Random Artworks
+   - Entering the gallery, the user is greeted by a display of randomly selected artworks that, when clicked, will open to the Artwork detail page.
+3. Artist Detail page:
+   - Offers in-depth information about the artist, including:
+     - Biography,
+     - Region,
+     - Associated artworks and movements,
+     - Media used in their artworks
+4. Artist Overview page: 
+   - Displays a grid of artists with their names and portraits (if available)
+5. Artworks
+   - Search Results: Displays all artworks categorised by a specific medium.
+   - Includes high-resolution images, titles and links to associated artist and movement pages.
+6. Movements
+    - Overview Page: Showcases all art movements with their associated images and brief descriptions
+    - Movement Detail page: Provides detailed information about the movement, including:
+      - Historical context,
+      - Associated artists and artworks,
+      - Prominent styles and characteristics
+7. Search Functionality
+   - A dynamic search bar in the site's navigation allows users to find artists, movements and artworks by keywords.
+   - Results are categorised for ease of navigation:
+      - Artists (names listed),
+      - Movements (images)
+      - Artworks (images)
+8. Modal View
+   - Enables users to view artwork images in a larger format,
+   - Displays additional details such as the title and artist, without leaving the current page.
+9. Responsive Design
+   - The site is fully responsive, ensuring an optimal vieweing experience across all devices,
+   - Grids, images and navigation adapt seamlessly to different screen sizes, from desktops to tablets and mobile phones. 
 
-#### LANGUAGES
-- HTML5
-- CSS3
-- Python
-- Django
+   ***
+### TECHNOLOGIES USED
+The development of this website employed a variety of modern tools, technologies, and frameworks to ensure a seamless, visually appealing, and responsive user experience. 
+Here's an overview of the technologies used:
+- Django: A Python-based web framework for building robust, scalable web applications.
+- SQLite: Used as the database during developments for storing data related to artists, artworks, movements and media. 
+- HTML5: Forms the backbone of the site structure
+- CSS3: Used to style the site, ensuring visual consistency and responsiveness. Key CSS features include:
+  - Grid layout for arranging content,
+  - Flexbox for flexible and adaptive UI components,
+  - Custom CSS for a bespoke approach to styling to ensure a unique aesthetic consistent with the gallery's theme, avoiding heavy reliance on pre-built frameworks like Bootstrap, 
+  - Media queries for responsive design
+- Javascript: Adds interactivity, including modal functionality for viewing larger images and the dynamic search experience.
+- Font Awesome: For icons and other visual elements. 
 
 #### FRAMEWORKS, LIBRARIES & TOOLS
 - <composite image> to create the multi-device mock-up 
-- [Figma](https://www.figma.com "Figma home") - used to map out the prototype
+- [Figma](https://www.figma.com "Figma home") - used to map out concept
 - [Favicon](https://favicon.io/ "Favicon home") - to create the Favicon
 - [PyCharm]- chosen IDE
 - [GitHub](https://github.com/ "GitHub home") - hosting, version control and deployment
@@ -88,74 +140,27 @@ Wireframes, concept prototypes and user journeys were mapped out using [Figma](h
 - [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/ "Lighthouse overview") - used to audit performance, accessibility, development best-practice and SEO. 
 ***
 
-## TESTING
-All code validated via the [W3C HTML Validation Service](https://validator.w3.org/) , [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) and [JSHint](https://jshint.com/) to detect errors and potential problems in the code. 
+### TESTING
+Testing was an integral part of the development process to ensure the website's functionality, performance, and user experience met the project objectives. Here's an overview of the testing approaches used: 
+###1. Manual Testing
+- Cross-Browser Compatibility: The site was tested on popular web browsers, including Chrome, Firefox and Safari to ensure consistent functionality and styling.
+- Device Responsiveness: The design was evaluated on various devies, such as desktops, tablets and smartphones to confirm responsiveness and usability across screen sizes.
+- Navigation: Tested links, menus and buttons for accessibility and proper routing to ensure seamless user interaction.
+- Search Functionality: Verified that the search bar returned correct results for artists, movements and media, and displayed them appropriately.
 
-! outline errors (if any) and steps to resolve. Provide screenshots 
+###2. Functionality Testing
+- Image Upload and Display: Confirmed that uploaded images (artists, movements, artworks) were stored correctly and displayed in the appropriate sections.
+- Dynamic Content Rendering: Checked the correct association and display of artists, artworks, and movements across the site.
+- Forms: Ensured forms (e.g., search bar) handled user input correctly, including edge cases such as invalid or missing input.
 
+###3. PERFORMANCE TESTING 
+- Loading Times: Evaluated the speed of page loads, especially for image-heavy sections, to optimize user experience.
+- Database Queries: Used Django Debug Toolbar to identify and optimize slow or redundant database queries.
 
-#### HTML VALIDATION 
-<insert image here>
+###4. CODE TESTING
+- Python and Django Debugging Tools: Used Django's built-in error reporting to troubleshoot and resolve backend issues.
 
-
-#### CSS VALIDATION
-<insert image here>
-
-
-
-
-#### LIGHTHOUSE TESTING 
-The website was tested for: 
-- Performance - how the page performs while loading
-- Accessibility - meets accessibility standards so that it works equally for everyone and provides tips on improvement where relevant
-- Best practice - conforms to current industry best practice standards
-- SEO - Search engine optimisation. Ranks the site 
-
-<insert images>
-
-#### ACCESSIBILITY
-A11y
-<insert image/s> 
-
-Mobile simulator
-<insert image/s>
-
-#### MANUAL TESTING
-Throughout development, I carried out a range of manual testing to ensure functionality was as intended. 
-
-These included: 
-
-* Landing page
-    *   Page loads correctly
-    *   User can clearly see and interact with the site
-    *   Clicking the 'Let's go!' button will start the game and direct the user to the next section - Choosing the level of difficulty. 
-
-* Navigation 
-    * Click the home icon to reload the website
-    * Question mark icon will trigger a modal with game rules
-    * Triggered modal has a cross icon to close, and it works
-
-* x section
-    * ... 
-
-* y section 
-    * ...
-
-* z section 
-    * ...
-        
-#### BROWSER COMPATIBILITY
-This website has been manually tested on the browsers listed below, with additional testing via Lighthouse. 
-- Google Chrome
-- Safari
-- Firefox
-
-#### BUGS
-...
-
-***
-
-### DEPLOYMENT
+## DEPLOYMENT
 This website was deployed to GitHub Pages. 
 ***
 
