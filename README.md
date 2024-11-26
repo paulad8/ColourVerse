@@ -34,21 +34,44 @@ Art Space is an interactive, visually appealling online gallery that showcases a
 - Modularity and scalability to accommodate future enhancements, such as adding more artists, artworks, 
 
 #### USER OBJECTIVES
+The primary objectives of users interacting with this site would include:
+
+1. Discovering and Exploring Artists
+- Users can browse and learn about artists from different regions, movements, and mediums.
+- Access detailed biographies, associated artworks, and related movements.
+2. Exploring Artworks
+- View high-quality images of artworks organized by medium, movement, or artist.
+- Access comprehensive details about each artwork, including its title, medium, and movement.
+3. Understanding Art Movements
+- Explore various art movements through curated descriptions and visuals.
+- Discover artworks and artists associated with each movement for better context and understanding.
+4. Searching and Filtering
+- Utilize the search bar to find artists, movements, or artworks by keyword.
+- Filter content by medium, movement, or artist to quickly locate specific interests.
+5. Enjoying a Visually Rich Experience
+- Navigate a design-focused and visually engaging interface.
+- Experience modal image pop-ups for detailed artwork viewing.
+6. Accessing a User-Friendly and Responsive Platform
+- Seamlessly interact with the site across devices, ensuring a consistent experience on desktops, tablets, and mobile phones.
+- Explore an intuitive layout that simplifies navigation for both casual browsers and art enthusiasts.
+
+
+#### SITE OWNER OBJECTIVES
+- Demonstrate competency in the languages and frameworks studied under the Full Stack Development journey
+- Create an artwork repository that is compelling and engaging and effectively applies modern UI standards and UX principles. 
+- Design a visually appealing, fully responsive and accessible website
+- Challenge myself by incorporating newly acquired programming knowledge with my design background,
+
+And, 
 - Art is for everybody.
 - Art is to inspire.
 - Art is joy.
 - I am bringing key movements in art history and pioneering masters to the user. To move, to inspire, to educate.  
 
-#### SITE OWNER OBJECTIVES
-- Demonstrate competency in the languages and frameworks studied under the Full Stack Development journey
-- Create an artwork repository that is compelling and engaging and applies modern UI standards and UX principles effectively. 
-- Design a visually appealing, fully responsive and accessible website
-- Challenge myself by incorporating newly acquired programming knowledge with my design background.  
-
 ***
 ### USER EXPERIENCE
 #### TARGET AUDIENCE
-This project is designed to be a resourceful tool for art enthusiasts, researchers, and educators, while also celebrating the diversity of artistic expression through a thoughtfully curated online experience.
+This project is designed to be a resourceful tool for art enthusiasts, researchers, and educators while also celebrating the diversity of artistic expression through a thoughtfully curated online experience.
 
 #### USER REQUIREMENTS
 - Simple navigation
@@ -63,7 +86,7 @@ This project is designed to be a resourceful tool for art enthusiasts, researche
 
 
 #### COLOUR PALETTE 
-Consistent across all devices, to complement and not compete with the artworks on display, I have chosen a background with a gradient of soft muted hues of lavender and pink. Components complement in purple with a similar subtle range of interaction states.
+Consistent across all devices, to complement and not compete with the artworks on display, I have chosen a background with a gradient of soft, muted hues of lavender and pink. Components complement in purple with a similar subtle range of interaction states.
 
 
 #### TYPOGRAPHY
