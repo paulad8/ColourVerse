@@ -155,8 +155,9 @@ Here's an overview of the technologies used:
 - [Figma](https://www.figma.com "Figma home") - used to map out concept
 - [Favicon](https://favicon.io/ "Favicon home") - to create the Favicon
 - [PyCharm]- chosen IDE
-- [GitHub](https://github.com/ "GitHub home") - hosting, version control and deployment
+- [GitHub](https://github.com/ "GitHub home") - version control
 - [GitHub Desktop](https://desktop.github.com/ "GitHub Desktop home") - to push changes and simplify development workflow
+- [AWS Elastic Beanstalk](https://signin.aws.amazon.com/signup?request_type=register) - deployment and hosting
 - [a11y](https://color.a11y.com/Contrast/ "a11y Contrast checker") - colour contrast accessibility validator
 - [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/ "Google Chrome Developer") - to test responsiveness and debug
 - [Mobile simulator](https://chrome.google.com/webstore/detail/mobile-simulator-responsi/ckejmhbmlajgoklhgbapkiccekfoccmk "Mobile simulator extension overview") - to test responsiveness on a vast range of devices. 
@@ -171,28 +172,27 @@ Testing was an integral part of the development process to ensure the website's 
 - Navigation: Tested links, menus and buttons for accessibility and proper routing to ensure seamless user interaction.
 - Search Functionality: Verified that the search bar returned correct results for artists, movements and media, and displayed them appropriately.
 
-###2. Functionality Testing
+### 2. Functionality Testing
 - Image Upload and Display: Confirmed that uploaded images (artists, movements, artworks) were stored correctly and displayed in the appropriate sections.
 - Dynamic Content Rendering: Checked the correct association and display of artists, artworks, and movements across the site.
 - Forms: Ensured forms (e.g., search bar) handled user input correctly, including edge cases such as invalid or missing input.
 
-###3. PERFORMANCE TESTING 
+### 3. PERFORMANCE TESTING 
 - Loading Times: Evaluated the speed of page loads, especially for image-heavy sections, to optimize user experience.
 - Database Queries: Used Django Debug Toolbar to identify and optimize slow or redundant database queries.
 
-###4. CODE TESTING
+### 4. CODE TESTING
 - Python and Django Debugging Tools: Used Django's built-in error reporting to troubleshoot and resolve backend issues.
 
 ## DEPLOYMENT
-This website was deployed to GitHub Pages. 
+This website was deployed to AWS Elastic Beanstalk 
 ***
 
 ### CREDITS
 - Fonts from [Google Fonts](https://fonts.google.com/)
 - HTML icons from [Font Awesome](https://fontawesome.com/)
 - [Favicon](https://favicon.io/favicon-converter/) converted icon created by Vectors Market on [Flaticon](https://www.flaticon.com/free-icons/travel) 
-- Code snippets and structure inspiration derived from past students' projects and the online code community via [StackOverflow](https://stackoverflow.com/), [A Designer who Codes](https://www.youtube.com/@ADesignerWhoCodes/playlists) and [ByteGrad](https://www.youtube.com/@ByteGrad).
-
+- Code snippets, guidance and inspiration from the broader online code community via [StackOverflow](https://stackoverflow.com/)
 
 
 
