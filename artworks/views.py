@@ -83,3 +83,9 @@ def artworks_by_media(request, media):
         'artworks': artworks
     }
     return render(request, 'gallery/artworks_by_media.html', context)
+
+def custom_404(request, exception):
+    return render(request, '404.html', status=404)
+
+def custom_500(request):
+    return render(request, '500.html', status=500)

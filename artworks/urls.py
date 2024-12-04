@@ -2,6 +2,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path
 from . import views
+from django.conf.urls import handler404, handler500
+from django.shortcuts import render
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -18,3 +20,6 @@ urlpatterns = [
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler404 = 'artworks.views.custom_404'
+handler500 = 'artworks.views.custom_500'
