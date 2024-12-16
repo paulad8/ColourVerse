@@ -4,7 +4,7 @@
 *Developed by Paula De Amicis*
 
 Code Institute's Milestone Project 3 culminates in completing all modules in the Full-stack Development journey. 
-Drawing knowledge from HTML5, CSS3, JavaScript, SQLite, GitHub, Python and Django.
+Drawing knowledge from HTML5, CSS3, JavaScript, SQLite, GitHub, AWS Elastic Beanstalk, Python and Django.
 <Visit live website>
 
 <Insert composite image of game screenshots>
@@ -170,7 +170,7 @@ Testing was an integral part of the development process to ensure the website's 
 - Cross-Browser Compatibility: The site was tested on popular web browsers, including Chrome, Firefox and Safari to ensure consistent functionality and styling.
 - Device Responsiveness: The design was evaluated on various devies, such as desktops, tablets and smartphones to confirm responsiveness and usability across screen sizes.
 - Navigation: Tested links, menus and buttons for accessibility and proper routing to ensure seamless user interaction.
-- Search Functionality: Verified that the search bar returned correct results for artists, movements and media, and displayed them appropriately.
+- Search Functionality: Verified that the search bar returned correct results for artists, movements and media and displayed them appropriately.
 
 ### 2. Functionality Testing
 - Image Upload and Display: Confirmed that uploaded images (artists, movements, artworks) were stored correctly and displayed in the appropriate sections.
@@ -185,7 +185,7 @@ Testing was an integral part of the development process to ensure the website's 
 - Python and Django Debugging Tools: Used Django's built-in error reporting to troubleshoot and resolve backend issues.
 
 ## DEPLOYMENT
-This website was deployed to AWS Elastic Beanstalk 
+This website was deployed using AWS Elastic Beanstalk. Since the application exceeded the 512 MB limit, the best solution was to offload static media files to AWS S3. 
 ***
 
 ### CREDITS
