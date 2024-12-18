@@ -1,0 +1,22 @@
+# Ignore virtual environments
+venv/
+gallery_env/
+
+# Ignore local settings
+*.sqlite3
+*.log
+*.pyc
+*.pyo
+__pycache__/
+
+# Ignore static and media files (already on S3)
+static/
+media/
+
+# Ignore unnecessary files
+node_modules/
+.DS_Store
+.idea/
+.vscode/
+*.bak
+*.tmp
