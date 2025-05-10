@@ -1,5 +1,26 @@
 
-# Elastic Beanstalk Files
-.elasticbeanstalk/*
-!.elasticbeanstalk/*.cfg.yml
-!.elasticbeanstalk/*.global.yml
+# Ignore staticfiles build output (collected static assets)
+staticfiles/
+
+# macOS system files
+.DS_Store
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+env/
+venv/
+gallery_env/
+
+# IDE/editor config files
+.idea/
+*.iml
+
+# OS-specific files
+Thumbs.db
+ehthumbs.db
+
