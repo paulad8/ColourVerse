@@ -7,7 +7,7 @@ Code Institute's Milestone Project 3 culminates in completing all modules in the
 Drawing knowledge from HTML5, CSS3, JavaScript, SQLite, GitHub, AWS Elastic Beanstalk, Python and Django.
 <Visit live website>
 
-<Insert composite image of game screenshots>
+<Insert composite image of game screenshots\>
 
 ### TABLE OF CONTENTS
 1. Project Objective
@@ -151,7 +151,6 @@ Here's an overview of the technologies used:
 - Font Awesome: For icons and other visual elements. 
 
 #### FRAMEWORKS, LIBRARIES & TOOLS
-- <composite image> to create the multi-device mock-up 
 - [Figma](https://www.figma.com "Figma home") - used to map out concept
 - [Favicon](https://favicon.io/ "Favicon home") - to create the Favicon
 - [PyCharm]- chosen IDE

@@ -1,0 +1,8 @@
+
+{
+  "include": ["."],
+  "venvPath": "/Users/paula/Documents/GitHub",
+  "venv": "gallery_env",
+  "reportMissingImports": true,
+  "reportMissingTypeStubs": false
+}
