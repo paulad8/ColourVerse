@@ -5,9 +5,9 @@
 
 Code Institute's Milestone Project 3 culminates in completing all modules in the Full-stack Development journey. 
 Drawing knowledge from HTML5, CSS3, JavaScript, SQLite, GitHub, AWS Elastic Beanstalk, Python and Django.
-<Visit live website>
+Visit [Artspace](https://colourverse-gallery-cbe65e564b0a.herokuapp.com/)
 
-<Insert composite image of game screenshots\>
+
 
 ### TABLE OF CONTENTS
 1. Project Objective
@@ -27,7 +27,7 @@ Drawing knowledge from HTML5, CSS3, JavaScript, SQLite, GitHub, AWS Elastic Bean
 To create a website with a single main page displaying randomly selected images removed from a separate portfolio page. 
 
 ### PROJECT CONCEPT
-Art Space is an interactive, visually appealling online gallery that showcases a selection of pioneering artists, their artworks, and the movements they belong to. It offers an intuitive way for users to explore and discover art through search functionality, detailed artist and artwork pages, and categorised movements. The platform prioritises: 
+Art Space is an interactive, visually appealing online gallery that showcases a selection of pioneering artists, their artworks, and the movements they belong to. It offers an intuitive way for users to explore and discover art through search functionality, detailed artist and artwork pages, and categorised movements. The platform prioritises: 
 - A clean and consistent design aligned with modern web standards.
 - Responsive layouts to ensure a seamless experience across devices.
 - Efficient search capabilities for users to find information by artist, movement or medium.
@@ -37,16 +37,16 @@ Art Space is an interactive, visually appealling online gallery that showcases a
 The primary objectives of users interacting with this site would include:
 
 1. Discovering and Exploring Artists
-- Users can browse and learn about artists from different regions, movements, and mediums.
+- Users can browse and learn about artists from different regions, movements, and media.
 - Access detailed biographies, associated artworks, and related movements.
 2. Exploring Artworks
-- View high-quality images of artworks organized by medium, movement, or artist.
+- View high-quality images of artworks organised by medium, movement, or artist.
 - Access comprehensive details about each artwork, including its title, medium, and movement.
 3. Understanding Art Movements
-- Explore various art movements through curated descriptions and visuals.
-- Discover artworks and artists associated with each movement for better context and understanding.
+- Explore various art movements through curated descriptions and visual representations.
+- Explore artworks and artists associated with each movement for a deeper understanding and context.
 4. Searching and Filtering
-- Utilize the search bar to find artists, movements, or artworks by keyword.
+- Utilise the search bar to find artists, movements, or artworks by keyword.
 - Filter content by medium, movement, or artist to quickly locate specific interests.
 5. Enjoying a Visually Rich Experience
 - Navigate a design-focused and visually engaging interface.
@@ -58,7 +58,7 @@ The primary objectives of users interacting with this site would include:
 
 #### SITE OWNER OBJECTIVES
 - Demonstrate competency in the languages and frameworks studied under the Full Stack Development journey
-- Create an artwork repository that is compelling and engaging and effectively applies modern UI standards and UX principles. 
+- Create an artwork repository that is both compelling and engaging, effectively applying modern UI standards and UX principles. 
 - Design a visually appealing, fully responsive and accessible website
 - Challenge myself by incorporating newly acquired programming knowledge with my design background,
 
@@ -86,16 +86,15 @@ This project is designed to be a resourceful tool for art enthusiasts, researche
 
 
 #### COLOUR PALETTE 
-Consistent across all devices, to complement and not compete with the artworks on display, I have chosen a background with a gradient of soft, muted hues of lavender and pink. Components complement in purple with a similar subtle range of interaction states.
+Consistent across all devices, to complement and not compete with the artworks on display, I have chosen a background with a gradient of soft, muted hues of lavender and pink. Components complement each other in purple, featuring a similar subtle range of interaction states.
 
 
 #### TYPOGRAPHY
-Google Fonts are incorporated into the website: **Major Mono Display** for the heading and subheadings and **Poppins** for all other scales with a standard sans serif fallback. Major Mono Display was selected to reflect the site's arty aspect, while Poppins is legible and clear. 
+Google Fonts are incorporated into the website: **Major Mono Display** for the heading and subheadings, and **Poppins** for all other scales with a standard sans serif fallback. Major Mono Display was selected to reflect the site's arty aspect, while Poppins is legible and clear. 
 
 #### PROTOTYPES
 Wireframes, concept prototypes and user journeys were mapped out using [Figma](https://www.figma.com "Figma home"). 
    
-![insert image here]
 
 ### STRUCTURE
 The site is organised into several key sections, each designed to provide users with an intuitive way to navigate and explore the gallery's content: 
@@ -123,7 +122,7 @@ The site is organised into several key sections, each designed to provide users 
       - Associated artists and artworks,
       - Prominent styles and characteristics
 7. Search Functionality
-   - A dynamic search bar in the site's navigation allows users to find artists, movements and artworks by keywords.
+   - A dynamic search bar in the site's navigation enables users to find artists, movements, and artworks by keyword.
    - Results are categorised for ease of navigation:
       - Artists (names listed),
       - Movements (images)
@@ -140,15 +139,16 @@ The site is organised into several key sections, each designed to provide users 
 The development of this website employed a variety of modern tools, technologies, and frameworks to ensure a seamless, visually appealing, and responsive user experience. 
 Here's an overview of the technologies used:
 - Django: A Python-based web framework for building robust, scalable web applications.
-- SQLite: Used as the database during developments for storing data related to artists, artworks, movements and media. 
+- SQLite: Used as the database during development for storing data related to artists, artworks, movements and media. 
 - HTML5: Forms the backbone of the site structure
 - CSS3: Used to style the site, ensuring visual consistency and responsiveness. Key CSS features include:
   - Grid layout for arranging content,
   - Flexbox for flexible and adaptive UI components,
   - Custom CSS for a bespoke approach to styling to ensure a unique aesthetic consistent with the gallery's theme, avoiding heavy reliance on pre-built frameworks like Bootstrap, 
   - Media queries for responsive design
-- Javascript: Adds interactivity, including modal functionality for viewing larger images and the dynamic search experience.
-- Font Awesome: For icons and other visual elements. 
+- JavaScript: Adds interactivity, including modal functionality for viewing larger images and the dynamic search experience.
+- Font Awesome: For icons and other visual elements.
+- Heroku for deployment.
 
 #### FRAMEWORKS, LIBRARIES & TOOLS
 - [Figma](https://www.figma.com "Figma home") - used to map out concept
@@ -164,10 +164,10 @@ Here's an overview of the technologies used:
 ***
 
 ### TESTING
-Testing was an integral part of the development process to ensure the website's functionality, performance, and user experience met the project objectives. Here's an overview of the testing approaches used: 
+Testing was an integral part of the development process, ensuring the website's functionality, performance, and user experience met the project objectives. Here's an overview of the testing approaches used: 
 ###1. Manual Testing
 - Cross-Browser Compatibility: The site was tested on popular web browsers, including Chrome, Firefox and Safari to ensure consistent functionality and styling.
-- Device Responsiveness: The design was evaluated on various devies, such as desktops, tablets and smartphones to confirm responsiveness and usability across screen sizes.
+- Device Responsiveness: The design was evaluated on various devices, such as desktops, tablets and smartphones to confirm responsiveness and usability across screen sizes.
 - Navigation: Tested links, menus and buttons for accessibility and proper routing to ensure seamless user interaction.
 - Search Functionality: Verified that the search bar returned correct results for artists, movements and media and displayed them appropriately.
 
@@ -177,14 +177,14 @@ Testing was an integral part of the development process to ensure the website's 
 - Forms: Ensured forms (e.g., search bar) handled user input correctly, including edge cases such as invalid or missing input.
 
 ### 3. PERFORMANCE TESTING 
-- Loading Times: Evaluated the speed of page loads, especially for image-heavy sections, to optimize user experience.
-- Database Queries: Used Django Debug Toolbar to identify and optimize slow or redundant database queries.
+- Loading Times: Evaluated the speed of page loads, especially for image-heavy sections, to optimise user experience.
+- Database Queries: Used Django Debug Toolbar to identify and optimise slow or redundant database queries.
 
 ### 4. CODE TESTING
 - Python and Django Debugging Tools: Used Django's built-in error reporting to troubleshoot and resolve backend issues.
 
 ## DEPLOYMENT
-This website was deployed using AWS Elastic Beanstalk. Since the application exceeded the 512 MB limit, the best solution was to offload static media files to AWS S3. 
+This website was deployed using Heroku. 
 ***
 
 ### CREDITS
