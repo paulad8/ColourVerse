@@ -25,9 +25,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-j31srzu@zmv1!v!!zwx(nx(n(5t&=fgqqy2)3*!h0%ws)g2%c("
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+
+
 
 
 # Application definition
@@ -58,7 +60,7 @@ ROOT_URLCONF = "ColourVerse.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR, 'artworks', 'templates')],
+        "DIRS": [BASE_DIR / 'artworks' / 'templates'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

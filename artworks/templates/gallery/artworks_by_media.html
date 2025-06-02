@@ -1,5 +1,5 @@
 {% extends 'gallery/base.html' %}
-
+{% load static %}
 {% block content %}
 <h1 class="text-center">{{ media }}</h1>
 <div class="grid-container">
@@ -7,7 +7,7 @@
         <div class="works-card">
             <a href="{% url 'artist_detail' artwork.artist.id %}">
                 {% if artwork.image %}
-                    <img src="{{ artwork.image.url }}" alt="{{ artwork.title }}">
+                    <img src="{% static {{ artwork.image.url }}" alt="{{ artwork.title }}">
                 {% else %}
                     <div class="placeholder-icon">🎨</div> <!-- Fallback for missing images -->
                 {% endif %}

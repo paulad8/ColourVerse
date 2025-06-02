@@ -24,3 +24,8 @@ gallery_env/
 Thumbs.db
 ehthumbs.db
 
+# Ignore uploaded media (but not preloaded images)
+media/*
+!media/artists/
+!media/artists/**
+
